@@ -25,12 +25,13 @@ We simulate both healthy and faulty motor states. The graph below compares the s
 ![Realistic Data Generation](motor_vibration_signatures.png)
 2. Motor Degradation Trends (Cloud Training Data)
 To train the predictive model, I generated 50 days of degradation data. This "Death Curve" represents the exponential increase in vibration intensity as mechanical wear progresses.
-
+![Motor Degradation Trends](motor_degradation.png)
 3. Deep Learning: LSTM Model Training
 The Long Short-Term Memory (LSTM) network was trained over 100 epochs. The loss curve shows rapid convergence, demonstrating that the model effectively learned the temporal relationship between vibration trends and motor longevity.
-
+![Deep Learning](model_training_loss.png)
 4. Predictive Maintenance Dashboard
 The final output is a live dashboard where the AI forecasts the RUL. When the blue prediction line enters the red "Maintenance Threshold" (10 days remaining), the system triggers an automated alert to prevent downtime.
+![Predictive Maintenance Dashboard](digital_twin_dashboard.png)
 ## 💻 How to Run
 The project is structured to mimic the data lifecycle. Run the scripts in the following order:
 
@@ -59,6 +60,7 @@ python final_digital_twin.py
 Launches the predictive maintenance interface.
 ## 👨‍💻 Author
 Alireza Sorousheh
+
 
 
 
