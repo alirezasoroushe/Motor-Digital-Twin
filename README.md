@@ -22,7 +22,7 @@ This project implements a complete **Industrial IoT (IIoT) pipeline** for predic
 ## 📊 Performance & Results
 1. Realistic Data Generation (Edge)
 We simulate both healthy and faulty motor states. The graph below compares the stable (but drifting) hum of a healthy motor against the chaotic spikes and harmonics of a simulated bearing fault.
-
+![Realistic Data Generation](motor_vibration_signatures.png)
 2. Motor Degradation Trends (Cloud Training Data)
 To train the predictive model, I generated 50 days of degradation data. This "Death Curve" represents the exponential increase in vibration intensity as mechanical wear progresses.
 
@@ -59,6 +59,7 @@ python final_digital_twin.py
 Launches the predictive maintenance interface.
 ## 👨‍💻 Author
 Alireza Sorousheh
+
 
 
 
