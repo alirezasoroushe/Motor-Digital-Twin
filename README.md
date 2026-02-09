@@ -53,8 +53,8 @@ graph TD
     style E fill:#bbf,stroke:#333
     style I fill:#bbf,stroke:#333
     style L fill:#dfd,stroke:#333
-
 ```
+
 ## 📊 Performance & Results
 1. Realistic Data Generation (Edge)
 We simulate both healthy and faulty motor states. The graph below compares the stable (but drifting) hum of a healthy motor against the chaotic spikes and harmonics of a simulated bearing fault.
@@ -97,4 +97,5 @@ Launches the predictive maintenance interface.
 
 ## 👨‍💻 Author
 Alireza Sorousheh
+
 
