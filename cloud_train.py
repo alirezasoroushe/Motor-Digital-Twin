@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import joblib
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Dropout
 from sklearn.preprocessing import MinMaxScaler
@@ -13,6 +14,10 @@ rul_target = df['RUL'].values
 # 2. Normalize data
 scaler = MinMaxScaler()
 vibration_scaled = scaler.fit_transform(vibration_data)
+
+# We must save this specific scaler to use it on new, unseen data later.
+joblib.dump(scaler, 'motor_scaler.gz')
+print("Scaler saved as 'motor_scaler.gz'")
 
 # 3. Prepare Sequences
 # The model looks at 5 days of history to predict the future

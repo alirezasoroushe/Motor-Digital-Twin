@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 def generate_motor_data(duration_sec=5, sampling_rate=1000, state='normal'):
     t = np.linspace(0, duration_sec, duration_sec*sampling_rate)
 
+    # Real motors don't spin at exactly 50Hz forever. Load changes cause drift.
+    freq_drift = np.linspace(49.5, 50.5, len(t))
     # 1. Base Vibration (50Hz rotation)
     vibration = 0.5 * np.sin(2 * np.pi * 50 * t)
 

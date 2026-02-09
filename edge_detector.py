@@ -7,6 +7,8 @@ import matplotlib.pyplot as plt
 data = pd.read_csv('normal_motor_data.csv')
 X_train = data['vibration'].values.reshape(-1,1)
 
+# In a real production environment, we would not train on Raw Data points.
+# We would extract features (RMS, Kurtosis, Crest Factor) over a sliding window.
 # 2. Train the "Gatekeeper" (One-Class SVM)
 # 'nu' is the % of outliers we expect (0.01 = 1%)
 model = OneClassSVM(kernel='rbf', gamma=0.1, nu=0.01)

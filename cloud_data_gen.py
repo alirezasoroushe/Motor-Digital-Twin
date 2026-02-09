@@ -2,14 +2,14 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def generate_degradation_data(days=50):
-    # Simulate 50 days of data (1 reading per day)
+def generate_degradation_data(days=100):
+    # Simulate 100 days of data (1 reading per day)
     t = np.arange(days)
 
     # Exponential growth in vibration as parts wear out
     base_vibration = 0.5
-    wear_trend = 0.05 * np.exp(0.08 * t)
-    noise = np.random.normal(0, 0.1, days)
+    wear_trend = 0.05 * np.exp(0.05 * t)
+    noise = np.random.normal(0, 0.05, days)
 
     total_vibration = base_vibration + wear_trend + noise
 
