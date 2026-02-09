@@ -47,12 +47,12 @@ Launches the predictive maintenance interface.
 
 ```mermaid
 graph TD
-    subgraph L1 [Layer 1: Physical Digital Twin]
+    subgraph L1 ["Layer 1: Physical Digital Twin"]
         A[data_generator.py] -->|Simulates Load Drift| B(Healthy Vibration)
         A -->|Injects 120Hz Harmonics| C(Faulty Vibration)
     end
 
-    subgraph L2 [Layer 2: Edge Intelligence]
+    subgraph L2 ["Layer 2: Edge Intelligence"]
         B --> D[edge_detector.py]
         C --> D
         D --> E{One-Class SVM}
@@ -60,13 +60,13 @@ graph TD
         E -- Anomaly --> G[Trigger Cloud Upload]
     end
 
-    subgraph L3 [Layer 3: Cloud Analytics]
+    subgraph L3 ["Layer 3: Cloud Analytics"]
         G --> H[cloud_train.py]
         H --> I[LSTM Neural Network]
         I -->|Save Model & Scaler| J[Artifact Store]
     end
 
-    subgraph L4 [Layer 4: User Interface]
+    subgraph L4 ["Layer 4: User Interface"]
         J --> K[final_digital_twin.py]
         K -->|Smoothing Filter| L[Predictive Dashboard]
         L --> M{Maintenance Alert?}
@@ -97,6 +97,7 @@ The final output is a live dashboard where the AI forecasts the RUL. When the bl
 
 ## 👨‍💻 Author
 Alireza Sorousheh
+
 
 
 
