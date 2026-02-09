@@ -53,3 +53,16 @@ graph TD
     style E fill:#bbf,stroke:#333
     style I fill:#bbf,stroke:#333
     style L fill:#dfd,stroke:#333
+```
+## 📊 Performance & Results
+1. Realistic Data Generation (Edge)
+We simulate both healthy and faulty motor states. The graph below compares the stable (but drifting) hum of a healthy motor against the chaotic spikes and harmonics of a simulated bearing fault.
+
+2. Motor Degradation Trends (Cloud Training Data)
+To train the predictive model, I generated 50 days of degradation data. This "Death Curve" represents the exponential increase in vibration intensity as mechanical wear progresses.
+
+3. Deep Learning: LSTM Model Training
+The Long Short-Term Memory (LSTM) network was trained over 100 epochs. The loss curve shows rapid convergence, demonstrating that the model effectively learned the temporal relationship between vibration trends and motor longevity.
+
+4. Predictive Maintenance Dashboard
+The final output is a live dashboard where the AI forecasts the RUL. When the blue prediction line enters the red "Maintenance Threshold" (10 days remaining), the system triggers an automated alert to prevent downtime.
