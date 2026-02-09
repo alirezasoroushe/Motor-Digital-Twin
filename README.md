@@ -66,3 +66,33 @@ The Long Short-Term Memory (LSTM) network was trained over 100 epochs. The loss 
 
 4. Predictive Maintenance Dashboard
 The final output is a live dashboard where the AI forecasts the RUL. When the blue prediction line enters the red "Maintenance Threshold" (10 days remaining), the system triggers an automated alert to prevent downtime.
+
+## 💻 How to Run
+The project is structured to mimic the data lifecycle. Run the scripts in the following order:
+
+1. Generate Data:
+
+python data_generator.py
+
+Creates normal_motor_data.csv with physics-based drift.
+
+2. Train Edge Model:
+
+python edge_detector.py
+
+Trains the One-Class SVM to learn "Normal" behavior.
+
+3. Train Cloud Model:
+
+python cloud_train.py
+
+Trains the LSTM and saves the scaler (motor_scaler.gz) to prevent data leakage.
+
+4. Run Dashboard:
+
+python final_digital_twin.py
+
+Launches the predictive maintenance interface.
+
+## 👨‍💻 Author
+Alireza Sorousheh
