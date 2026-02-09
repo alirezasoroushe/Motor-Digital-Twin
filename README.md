@@ -53,6 +53,7 @@ graph TD
     style E fill:#bbf,stroke:#333
     style I fill:#bbf,stroke:#333
     style L fill:#dfd,stroke:#333
+
 ```
 ## 📊 Performance & Results
 1. Realistic Data Generation (Edge)
@@ -96,3 +97,4 @@ Launches the predictive maintenance interface.
 
 ## 👨‍💻 Author
 Alireza Sorousheh
+
